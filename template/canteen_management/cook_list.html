@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+naresh
+
+{% endblock %}
+
+{% block content %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+            <th>phone_no</th>
+            <th>pan_no</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+        {% for item in cook_list %}
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.cook_info.phone_no}}</td>
+            <td>{{item.cook_info.pan_no}}</td>
+
+
+
+        </tr>
+
+        {% endfor%}
+
+
+
+    </tbody>
+
+</table>
+
+{% endblock %}}
